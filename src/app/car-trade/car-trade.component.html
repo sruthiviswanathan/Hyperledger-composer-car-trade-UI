@@ -1,0 +1,14 @@
+
+<form [formGroup]="carTrade" (ngSubmit)="onClickSubmit(carTrade)">
+  <div class="container">
+    <h1>CAR TRADE</h1>
+    <hr>
+    <label for="car"><b>CAR ID</b></label>
+    <input type="text" class="input" formControlName="carId">
+
+    <label for="owner"><b>OWNER ID</b></label>
+    <input type="text" class="input"  formControlName="ownerId">
+
+    <button type="submit" class="button">TRADE CAR</button>
+  </div>
+</form> 

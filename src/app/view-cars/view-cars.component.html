@@ -1,0 +1,15 @@
+
+<body onload="getAllCars()">
+<div class="card" *ngFor="let car of cars">
+    <h5 class="card-header">CAR MODEL: {{car.carName}}</h5>
+    <div class="card-body">
+      <h5 class="card-text">MANUFACTURED BY:{{car.features.manufacturer}}</h5> 
+      <p class="card-text">COLOR :{{car.features.color}}</p>
+      <p class="card-text">TYPE OF FUEL :{{car.features.type}}</p>
+      <p class="card-text">MANUFACTURED YEAR :{{car.features.manufactureYear}}</p>
+      <p class="card-text">SPEED :{{car.features.speed}}  {{car.features.speedUnit}}</p>
+      <p class="card-text">MILEAGE :{{car.features.mileage}}  {{car.features.mileageUnit}}</p>
+      <p class="card-text">PRICE :{{car.price}}   {{car.priceUnit}}</p>
+    </div>
+  </div> 
+</body>

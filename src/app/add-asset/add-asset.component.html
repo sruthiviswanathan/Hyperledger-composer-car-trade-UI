@@ -1,0 +1,60 @@
+<form [formGroup]="carModel" (ngSubmit)="onClickSubmit(carModel)">
+
+    <div class="container">
+      <h1>ADD NEW ASSET</h1>
+      <hr>
+      <label for="car"><b>CAR NAME</b></label>
+      <input type="text"  formControlName="name" class="input">
+  
+      <label for="fuel"><b>FUEL TYPE</b></label>
+      <select formControlName="fuel"  class="input">
+        <option value="">Fuel Type of car is</option>
+        <option *ngFor="let fuel of fuelType">{{fuel}}</option>
+      </select>
+  
+      <label for="color"><b>COLOR</b></label>
+      <input type="text" formControlName="color" class="input">
+  
+      <label for="manufacturer"><b>MANUFACTURER</b></label>
+      <input type="text"  formControlName="manufacturer"  class="input">
+  
+      <label for="manufactureYear"><b>MANUFACTURE YEAR</b></label>
+      <input type="number"  formControlName="manufactureYear" class="input">
+  
+      <label for="speed"><b>SPEED</b></label>
+     
+      <div class="dropdown">
+      
+      <input type="number"  class="field" formControlName="speed">
+      <select formControlName="speedUnit" class="field">
+        <option value="">enter speed unit</option>
+        <option *ngFor="let speed of speedUnit">{{speed}}</option>
+      </select>
+      </div>
+   
+      <label for="mileage"><b>MILEAGE</b></label>
+      <div class="dropdown">
+      <input type="number" class="field" formControlName="mileage">
+      <select formControlName="mileageUnit" class="field">
+          <option value="">enter mileage unit</option>
+          <option *ngFor="let mileage of mileageUnit">{{mileage}}</option>
+        </select>
+      </div>
+
+      <label for="manufacturerId"><b>MANUFACTURER ID</b></label>
+      <input type="number" class="input" formControlName="manufacturerId" >
+      <div>
+      
+      <label for="price"><b>PRICE</b></label>
+      <div class="dropdown">
+      <input type="number" class="field" formControlName="price">
+
+      <select formControlName="priceUnit" class="field">
+          <option value="">enter price unit</option>
+          <option *ngFor="let price of priceUnit">{{price}}</option>
+        </select>
+      </div>
+      </div>
+      <button type="submit" class="button">ADD ASSET</button>
+    </div>
+  </form>
